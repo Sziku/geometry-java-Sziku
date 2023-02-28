@@ -1,0 +1,271 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": false,
+    "cutTests": false,
+    "cutClient": false,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": false,
+    "cutConstructors": false
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "com.codecool.geometry.shapes.Shape",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+
+
+'nodes
+subgraph cluster_867524938 {
+   	label=codecool
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+
+   subgraph cluster_2035386538 {
+   	label=geometry
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+
+   Circle94561923[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Circle</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   area: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   areaFormula: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   parimeter: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   parimeterFormula: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   radius: double [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ Circle(radius: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateArea(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculatePerimeter(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getArea(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getAreaFormula(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getPerimeter(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getPerimeterFormula(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Rectangle94561923[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Rectangle</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   a: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   area: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   areaFormula: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   b: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   parimeter: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   parimeterFormula: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ Rectangle(a: double, b: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ Rectangle(a: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateArea(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculatePerimeter(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getArea(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getAreaFormula(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getPerimeter(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getPerimeterFormula(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+RegularPentagon94561923[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)RegularPentagon</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   a: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   area: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   areaFormula: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   parimeter: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   parimeterFormula: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ RegularPentagon(a: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateArea(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculatePerimeter(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getArea(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getAreaFormula(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getPerimeter(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getPerimeterFormula(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Shape94561923[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Shape</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ calculateArea(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculatePerimeter(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ checkIfArgsGreaterThanZero(args: double[]): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getArea(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getAreaFormula(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getPerimeter(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getPerimeterFormula(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ShapeCollection249998045[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ShapeCollection</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   shapeList: List&lt;Shape&gt; [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ ShapeCollection()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ addShape(shape: Shape)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getLargestShapeByArea(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getLargestShapeByPerimeter(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getLargestShapeListByAra(max: double): List&lt;String&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getLargestShapeListByPerimeter(max: double): List&lt;String&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >- getMaxCharacterWordIantheColumn(table: String[][]): int[]</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getShapesTable()</TD></TR>
+<TR><TD ALIGN="LEFT" >- nonWordLine(maxCharacterWordIantheColumn: int[], start: String, end: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >- printTable(table: String[][])</TD></TR>
+<TR><TD ALIGN="LEFT" >- shapeListTo2DArray(shapeList: List&lt;Shape&gt;): String[][]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Square94561923[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Square</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   a: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   areaFormula: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   parimeterFormula: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ Square(a: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getAreaFormula(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getPerimeterFormula(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Triangle94561923[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Triangle</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   a: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   area: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   areaFormula: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   b: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   c: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   parimeter: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   parimeterFormula: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ Triangle(a: double, b: double, c: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ Triangle(a: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateArea(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculatePerimeter(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getArea(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getAreaFormula(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getPerimeter(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getPerimeterFormula(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+}
+}
+
+'edges
+Rectangle94561923 -> Square94561923[arrowhead=none, arrowtail=empty, dir=both];
+Shape94561923 -> Circle94561923[arrowhead=none, arrowtail=empty, dir=both];
+Shape94561923 -> Rectangle94561923[arrowhead=none, arrowtail=empty, dir=both];
+Shape94561923 -> RegularPentagon94561923[arrowhead=none, arrowtail=empty, dir=both];
+Shape94561923 -> Triangle94561923[arrowhead=none, arrowtail=empty, dir=both];
+ShapeCollection249998045 -> Shape94561923[label="shapeList
+[0..*]"];
+
+}
+@enduml
